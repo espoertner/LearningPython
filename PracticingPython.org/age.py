@@ -1,0 +1,8 @@
+name = input("What is your name? e.g. Melissa \n")
+age = input("What is your age? e.g. 47\n")
+year = input("WHat year is it? e.g. 2019\n")
+print ("Hello " + name + ", you are currently " + age + " years old.") 
+age = int(age)
+year = int(year)
+yearat100 = year + (100-age)
+print ("You will turn 100 in " + str(yearat100) + ".")
