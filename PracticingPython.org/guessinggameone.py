@@ -6,7 +6,10 @@ import random
 userGuess = input("I'm thinking of a number between 1 and 9. What is it? To end the game type exit\n")
 if userGuess != "exit":
     userInt = int(userGuess)
+else:
+    print("You can't win if you don't play!")
 counter = 0
+counterCorrect = 0
 
 while userGuess != "exit":
     computerGuess = random.randint(1,9)
@@ -17,6 +20,7 @@ while userGuess != "exit":
     elif userInt < computerGuess:
         print("Your guess was too low.")
     else:
+        counterCorrect += 1
         print("Your guess was correct!")
     print("You guessed " + userGuess + " and I picked " + computerString)
     userGuess = input("I'm thinking of a number between 1 and 9. What is it? To end the game type exit\n")
@@ -24,4 +28,5 @@ while userGuess != "exit":
         userInt = int(userGuess)
     else:
         counterStr = str(counter)
-        print("The game has ended. You played " + counterStr + " times.")
+        counterCorrectStr = str(counterCorrect)
+        print("The game has ended. You played " + counterStr + " time(s) with " + counterCorrectStr + " correct guess(es).")
