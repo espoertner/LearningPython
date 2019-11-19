@@ -1,5 +1,7 @@
 #Ask the user for a number and determine whether the number is prime or not. 
 #A prime number is a number that has no divisors.
+#Known issue:
+#Throws ValueError when non-numbers are typed
 userNumber = input("Type a number to see if it's prime. ")
 userNumInt = int(userNumber)
 def checkPrimality(n):
