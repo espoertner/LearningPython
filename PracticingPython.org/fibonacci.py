@@ -13,5 +13,5 @@ def generateFibonnaci(x):
             newValue = (fibonnaciSequence[len(fibonnaciSequence)-1]) + (fibonnaciSequence[len(fibonnaciSequence)-2])
             fibonnaciSequence.append(newValue)
             counter += 1
-    print(fibonnaciSequence)
-generateFibonnaci(sequenceNumber)
+    return fibonnaciSequence
+print(generateFibonnaci(sequenceNumber))
